@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
 import { useViewerConnection } from "@self.id/react";
 import { EthereumAuthProvider } from "@self.id/web";
-import { useViewerRecord } from "@self.id/react";
 
 export default function Home() {
   const web3ModalRef = useRef();
@@ -81,9 +80,8 @@ function RecordSetter() {const record = useViewerRecord("basicProfile");
 const updateRecordName = async (name) => {
   await record.merge({
     name: name,
-  })
   }
-  const [name, setName] = useState("");
+  },
   return (
     <div className={styles.content}>
       <div className={styles.mt2}>
@@ -113,6 +111,7 @@ const updateRecordName = async (name) => {
       />
       <button onClick={() => updateRecordName(name)}>Update</button>
     </div>
-  )
-  };
+  );
+  );
+};
   

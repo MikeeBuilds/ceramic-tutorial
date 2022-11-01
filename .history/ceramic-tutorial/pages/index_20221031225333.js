@@ -83,7 +83,7 @@ const updateRecordName = async (name) => {
     name: name,
   })
   }
-  const [name, setName] = useState("");
+  
   return (
     <div className={styles.content}>
       <div className={styles.mt2}>
